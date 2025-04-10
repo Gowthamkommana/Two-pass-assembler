@@ -1,0 +1,9 @@
+ERROR : Duplicate Label at the line 4
+ERROR : Invalid Label Name at line 10
+ERROR : Undefined OPcode is used in the line 5
+ERROR : Undefined OPcode is used in the line 6
+ERROR: Opcode must be placed at line 7
+ERROR: Operand does not placed at a line 8
+ERROR : Undefined OPcode is used in the line 9
+ERROR: Undefined Mnemonic is used in the line 11
+ERROR: Undefined Mnemonic is used in the line 12

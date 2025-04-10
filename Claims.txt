@@ -1,0 +1,196 @@
+*_______________________________________________________________________*
+TITLE: Claims																																
+AUTHOR: Kommana Gowtham
+ROLL NO.: 2301AI12
+Declaration of Authorship
+Department : Artificial inteliigence and data science.
+*_______________________________________________________________________*
+Files:
+==========
+
+*All the files I submitted, assembler.cpp and emulator.cpp and claims.txt, have my name and ROLL NO. and department at the start.
+
+The evidence for Assembler including the output files from the eight test examples has also been uploaded. They are test1(3 output files), test2(3 output files), test3
+(3 output file), test4(3 output files), test5(3 output files), test6(3 output files), bubble_sort(3 output files) , nthibonacci(3 files ) , reverse_array(3 files).. All the test files have been tested and work properly. As for the evidence for the emulator is uploaded
+
+* Both of my cpp programs did not show any errors and warnings when I compiled it with g++ file.cpp
+
+* Two programs are compilable with g++ assembler.cpp -o assembler and g++ emulator.cpp -o emulator.
+
+
+=============================
+Program format and structure:
+=============================
+1. The assembler:
+
+    * with two data structures to store respectively labels and mnemonic table with expected operands.
+    * uses a single routine for both passes.
+    * detects label errors.
+    * consistent and sensible formatting with sensible program structure. 
+    * sensible variable, function & type names with explanatory comments.
+		* advanced listing file.
+		* assembles test programs.
+	  * can implements and demonstrates the instruction SET.
+
+2. The emulator :
+
+    * with two data structures to store respectively memory, mnemonic table with expected operands
+    * loads object file, 
+    * by giving the instructions like "-before/-after" , the program can produce memory dump before/after execution.
+    * by giving the instruction like "-trace", the program prints the result of program executed.
+    * by giving the instruction like "-read", the program prints the read instructions of program executed.
+    * by giving the instruction like "-write", the program prints the write instructions of program executed.
+    * detects errant programs.
+
+
+=============================
+Testing:
+=============================
+
+1. The assembler:
+
+I have tested eight examples shown as below. The errors only occurred in the file test2.asm and the errors are logged and shown in terminal.
+
+The others were tested without any errors detected and produced three output files, listing file, 
+error log file and machine readable object file, for each example. 
+
+After comparing the listing files and object file of all test files
+with the implemented result given on the assignment, both of them show no difference 
+from those provided.
+ 
+
+1)
+#Input: assembler test1.asm
+#Output: 
+a. test1.l 
+b. test1.log (without any error messages)
+c. test1.o
+
+2)
+#Input:assembler test2.asm
+#Output: 
+a. test2.l 
+b. test2.log (without error messages shown as below but also in log file)
+c. test2.o
+
+error messages:
+ERROR : Duplicate Label at the line 4
+ERROR : Invalid Label Name at line 10
+ERROR : Undefined OPcode is used in the line 5
+ERROR : Undefined OPcode is used in the line 6
+ERROR: Opcode must be placed at line 7
+ERROR: Oprand does not placed at a line 8
+ERROR : Undefined OPcode is used in the line 9
+ERROR : Undefined Mnemonic is used in the line 11
+ERROR : Undefined Mnemonic is used in the line 12
+
+3)
+#Input:./assembler.exe test3.asm
+#Output: 
+a. test3.l 
+b. test3.log (without any error messages)
+c. test3.o
+
+4)
+#Input:./assembler.exe test4.asm
+#Output: 
+a. test4.l 
+b. test4.log (without any error messages)
+c. test4.o
+
+5)
+#Input:./assembler.exe test5.asm
+#Output: 
+a. test5.l 
+b. test5.log (without any error messages)
+c. test5.o
+
+6)
+#Input:./assembler.exe test6.asm
+#Output: 
+a. test6.l 
+b. test6.log (without any error messages)
+c. test6.o
+
+7)
+#Input:./assembler.exe MyBubbleSort.asm
+#Output: 
+a. bubble_sort.l 
+b. bubble_sort.log (without any error messages)
+c. bubble_sort.o
+
+8)
+#Input:./assembler.exe nth_fibanocci.asm
+#Output: 
+a. nth_fibanocci.l 
+b. nth_fibanocci.log (without any error messages)
+c. nth_fibanocci.o
+
+9)
+#Input:./assembler.exe reverse_array.asm
+#Output: 
+a. reverse_array.l 
+b. reverse_array.log (without any error messages)
+c. reverse_array.o
+
+2. The emulator:
+
+I have tested eight examples shown as bellow. The errors only occurred in the file test1.o and 
+the program immediately stopped with an error message of infinite loop detected on the screen. 
+
+The others were tested without any errors detected and produced excution data both on the screen and 
+output trace file for each example according to the usage instruction. 
+
+1)
+#Input:./emulator.exe -trace test1.o
+
+Error message: 
+Infinite loop detected
+3 number of instructions executed
+
+2)
+#Input:./emulator.exe -trace test2.o
+
+0 number of instructions executed
+
+3)
+#Input:./emulator.exe -trace test3.o
+
+
+4 number of instructions executed
+
+4)
+#Input:./emulator.exe -trace test4.o
+
+47653 number of instructions executed
+
+5)
+#Input:./emulator.exe -trace test5.o
+
+
+41 number of instructions executed
+
+6)
+#Input:./emulator.exe -trace test6.o
+
+
+1403 number of instructions executed
+
+7)
+#Input:./emulator.exe -trace bubble_sort.o
+
+
+295 number of instructions executed
+
+8)
+#Input:./emulator
+enter the name of file = nth_fibanocci.o
+
+
+148 number of instructions executed
+
+9)
+#Input:./emulator
+enter the name of file = reverse_array.o
+
+187 number of instructions executed
